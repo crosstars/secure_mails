@@ -15,6 +15,8 @@ class Ui_Login_win(object):
     def setupUi(self, Login_win):
         Login_win.setObjectName("Login_win")
         Login_win.resize(800, 624)
+        self.validated = 0
+        self.clicked = 0
         self.login = QtWidgets.QWidget(Login_win)
         self.login.setObjectName("login")
         self.gridLayout = QtWidgets.QGridLayout(self.login)
@@ -51,7 +53,7 @@ class Ui_Login_win(object):
         self.error.setObjectName("error")
         self.passwd = QtWidgets.QLineEdit(self.login_grp)
         self.passwd.setGeometry(QtCore.QRect(190, 410, 431, 31))
-        self.passwd.setStyleSheet("background-color: rgb(255,255,255);")
+        self.passwd.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         self.passwd.setEchoMode(QtWidgets.QLineEdit.Password)
         self.passwd.setObjectName("passwd")
         self.label_2 = QtWidgets.QLabel(self.login_grp)
@@ -72,9 +74,10 @@ class Ui_Login_win(object):
 "border-color: rgb(98, 160, 234);\n"
 "selection-color: rgb(53, 132, 228);")
         self.login_btn.setObjectName("login_btn")
+        self.login_btn.clicked.connect(self.login_function)
         self.uname = QtWidgets.QLineEdit(self.login_grp)
         self.uname.setGeometry(QtCore.QRect(190, 300, 431, 31))
-        self.uname.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.uname.setStyleSheet("background-color: rgba(0,0,0,0);")
         self.uname.setObjectName("uname")
         self.label_3 = QtWidgets.QLabel(self.login_grp)
         self.label_3.setGeometry(QtCore.QRect(190, 260, 281, 41))
@@ -96,3 +99,16 @@ class Ui_Login_win(object):
         self.login_btn.setText(_translate("Login_win", "Login"))
         self.uname.setWhatsThis(_translate("Login_win", "<html><head/><body><p>Username</p></body></html>"))
         self.label_3.setText(_translate("Login_win", "Username (Email id)"))
+        self.error.hide()
+    def login_function(self):
+        
+        #
+        #validate password
+        #if incorrect login info ,
+        #self.error.show()
+        #  update self.validated  
+        #create user db 
+        #
+        #
+        self.clicked=1
+        QtWidgets.qApp.quit()
