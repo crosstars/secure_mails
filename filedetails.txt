@@ -1,0 +1,4 @@
+1)finalsosend(sender) and finalsorecv(reciever) are socket programs with encryption decryption and key exchange shown.
+2)keyrecvso(reciever) and keysendso(sender) are socket programs with key exchange shown.
+3)ecdh is a sample elliptic curve diffie hellamn file.
+4)recfaes and senfaes are programs whioch encryption and decryption only.

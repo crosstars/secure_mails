@@ -1,0 +1,9 @@
+q1)why was the aes algorithm necessary?
+q2)what is aes?
+q3)features of aes?
+q4)how does aes work?(encryption decryption process)
+q5)what are the application of aes?
+q6)what are the steps involved in each round of aes?
+q7)what are the modes of aes?
+q8)padding in cryptography?
+q9)initialization vector in cryptography?
