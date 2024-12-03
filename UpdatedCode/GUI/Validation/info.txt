@@ -1,0 +1,14 @@
+#errors
+internet not connected
+key not found 
+login donot exists
+account already exists
+reciptent not exists
+seesion timeout
+
+#success
+sign-up successfull
+login successfull
+welcome
+message sent successfuly
+

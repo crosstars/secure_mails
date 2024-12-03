@@ -1,0 +1,15 @@
+from tinyec import registry 
+import secrets
+import pickle
+
+def compress(pubKey):
+    return hex(pubKey.x) + hex(pubKey.y % 2)[2:]
+
+curve = registry.get_curve('brainpoolP256r1')
+
+def keypair():
+    alicePrivKey = secrets.randbelow(curve.field.n)
+    alicePubKey = alicePrivKey * curve.g
+
+    return pickle.dumps(alicePrivKey),pickle.dumps(alicePubKey)
+
